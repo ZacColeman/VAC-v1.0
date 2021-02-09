@@ -1,6 +1,13 @@
 import VoiceRecognition as vr
 
 
+def test():
+    vr.textToSpeech('What numbers do you need to add?')
+    numbers = vr.speechToText()
+    numbers.split(' ')
+    sum(numbers)
+
+
 def addition():
     vr.textToSpeech('What is the first number?')
     x1 = int(vr.speechToText())
@@ -71,3 +78,5 @@ def division():
     answer = x1 / x2
     vr.textToSpeech('The answer is ')
     vr.textToSpeech(answer)
+
+test()
