@@ -25,7 +25,7 @@ def addition():
     numbers.split(' ')
     answer = list(map(int, numbers))
 
-    vr.textToSpeech('the sum is')
+    vr.textToSpeech('the answer is')
     vr.textToSpeech(sum(answer))
 
 
@@ -43,10 +43,11 @@ def subtraction():
         print(ans)
         i += 1
 
+    vr.textToSpeech('the answer is')
     vr.textToSpeech(ans)
 
 def multiplication():
-    vr.textToSpeech('What numbers do you need to subtract?')
+    vr.textToSpeech('What numbers do you need to multiply?')
     numbers = vr.speechToText()
     numbers.split(' ')
     answer = list(map(int, numbers))
@@ -59,9 +60,10 @@ def multiplication():
         print(ans)
         i += 1
 
+    vr.textToSpeech('the answer is')
     vr.textToSpeech(ans)
 def division():
-    vr.textToSpeech('What numbers do you need to subtract?')
+    vr.textToSpeech('What numbers do you need to divide?')
     numbers = vr.speechToText()
     numbers.split(' ')
     answer = list(map(int, numbers))
@@ -70,9 +72,10 @@ def division():
 
     while i < len(answer):
         sub = answer[i]
-        ans = ans - sub
+        ans = ans / sub
         print(ans)
         i += 1
 
+    vr.textToSpeech('the answer is')
     vr.textToSpeech(ans)
 
