@@ -2,81 +2,77 @@ import VoiceRecognition as vr
 
 
 def test():
-    vr.textToSpeech('What numbers do you need to add?')
+    vr.textToSpeech('What numbers do you need to subtract?')
     numbers = vr.speechToText()
     numbers.split(' ')
-    sum(numbers)
+    print(numbers)
+    answer = [int(i) for i in numbers]
+    i = 1
+    ans = answer[0]
+
+    while i < len(answer):
+        sub = answer[i]
+        ans = ans / sub
+        print(ans)
+        i += 1
+
+    vr.textToSpeech(ans)
 
 
 def addition():
-    vr.textToSpeech('What is the first number?')
-    x1 = int(vr.speechToText())
-    vr.textToSpeech('The first number is ')
-    vr.textToSpeech(x1)
+    vr.textToSpeech('What numbers do you need to add?')
+    numbers = vr.speechToText()
+    numbers.split(' ')
+    answer = list(map(int, numbers))
 
-    vr.textToSpeech('What is the second number?')
-    x2 = int(vr.speechToText())
-    vr.textToSpeech('The second number is ')
-    vr.textToSpeech(x2)
-
-    vr.textToSpeech('Calculating')
-
-    answer = x1 + x2
-    vr.textToSpeech('The answer is ')
-    vr.textToSpeech(answer)
+    vr.textToSpeech('the sum is')
+    vr.textToSpeech(sum(answer))
 
 
 def subtraction():
-    vr.textToSpeech('What is the first number?')
-    x1 = int(vr.speechToText())
-    vr.textToSpeech('The first number is ')
-    vr.textToSpeech(x1)
+    vr.textToSpeech('What numbers do you need to subtract?')
+    numbers = vr.speechToText()
+    numbers.split(' ')
+    answer = list(map(int, numbers))
+    i = 1
+    ans = answer[0]
 
-    vr.textToSpeech('What is the second number?')
-    x2 = int(vr.speechToText())
-    vr.textToSpeech('The second number is ')
-    vr.textToSpeech(x2)
+    while i < len(answer):
+        sub = answer[i]
+        ans = ans - sub
+        print(ans)
+        i += 1
 
-    vr.textToSpeech('Calculating')
-
-    answer = x1 - x2
-    vr.textToSpeech('The answer is ')
-    vr.textToSpeech(answer)
-
+    vr.textToSpeech(ans)
 
 def multiplication():
-    vr.textToSpeech('What is the first number?')
-    x1 = int(vr.speechToText())
-    vr.textToSpeech('The first number is ')
-    vr.textToSpeech(x1)
+    vr.textToSpeech('What numbers do you need to subtract?')
+    numbers = vr.speechToText()
+    numbers.split(' ')
+    answer = list(map(int, numbers))
+    i = 1
+    ans = answer[0]
 
-    vr.textToSpeech('What is the second number?')
-    x2 = int(vr.speechToText())
-    vr.textToSpeech('The second number is ')
-    vr.textToSpeech(x2)
+    while i < len(answer):
+        sub = answer[i]
+        ans = ans * sub
+        print(ans)
+        i += 1
 
-    vr.textToSpeech('Calculating')
-
-    answer = x1 * x2
-    vr.textToSpeech('The answer is ')
-    vr.textToSpeech(answer)
-
-
+    vr.textToSpeech(ans)
 def division():
-    vr.textToSpeech('What is the first number?')
-    x1 = int(vr.speechToText())
-    vr.textToSpeech('The first number is ')
-    vr.textToSpeech(x1)
+    vr.textToSpeech('What numbers do you need to subtract?')
+    numbers = vr.speechToText()
+    numbers.split(' ')
+    answer = list(map(int, numbers))
+    i = 1
+    ans = answer[0]
 
-    vr.textToSpeech('What is the second number?')
-    x2 = int(vr.speechToText())
-    vr.textToSpeech('The second number is ')
-    vr.textToSpeech(x2)
+    while i < len(answer):
+        sub = answer[i]
+        ans = ans - sub
+        print(ans)
+        i += 1
 
-    vr.textToSpeech('Calculating')
+    vr.textToSpeech(ans)
 
-    answer = x1 / x2
-    vr.textToSpeech('The answer is ')
-    vr.textToSpeech(answer)
-
-test()
