@@ -1,4 +1,4 @@
-# VAC-v1.0
+# VAC-v1.1
 Voice Activated Calculator
 
 v1.0: Basic two number calculations (add, subtract, multiply, divide) using Speech_Recognition module
